@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">>
+    <title>AttriCSS</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav>
+        <header><a href="#">AttriCSS</a> <label for="nav"><i class="fas fa-bars"></i></label></header>
+        <input type="checkbox" id="nav" hidden checked>
+        <div overflow>
+            <ul>
+                <!--active link in navbar with active attribute-->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Container attribute-->
+    <section container>
+        <h3>Introduction</h3>
+        <p><b>AttriCSS</b> is a <mark>classless</mark> css style sheet that style normal ugly html to beatiful representable website.</p>
+        <h6>Why?</h6>
+        <p>For faster prototyping of backend logic on front end without any use of classes and just using html.</p>
+        <ol>
+            <li>For blogging website just add attricss to site and it will turn a ugly site into a beauty.</li>
+            <li>For backend developer who do not want to dig into css classes.</li>
+            <li>For faster prototyping.</li>
+            <li>No use of classes. still responsive and still have almost all the features you need.</li>
+            <li>Create your own theme by just changing some variables.</li>
+        </ol>
+
+        <h3>Available Themes</h3>
+        <ol>
+            <li><a href="./notheme.html">No Theme</a></li>
+            <li><a href="./brightlight-green.html">Bright Light green</a></li>
+            <li><a href="./midnight-green.html">Midnight Green</a></li>
+            <li><a href="./darkforest-pink.html">Dark Forest Green</a></li>
+            <li><a href="./darkfairy-pink.html">Dark Fairy Pink</a></li>
+            <li><a href="./lightfairy-pink.html">Light Fairy Pink</a></li>
+        </ol>
+    </section>
+    <section container>
+        <h3>Nav bar</h3>
+        <p>Above navbar is responsive by wrapping <mark>ul</mark> in a div with <mark>overflow</mark> attribute.</p>
+        <p><mark>NOTE</mark> We use <a href="https://fontawesome.com">font-awasome</a> for icons.</p>
+        <pre><code>
+&lt;nav&gt;
+    &lt;header&gt;
+        &lt;a href="#"&gt;Hello World&lt;/a&gt; 
+        &lt;label for="nav"&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;/label&gt;
+    &lt;/header&gt;
+    &lt;input type="checkbox" id="nav" hidden checked&gt;
+    &lt;div overflow&gt;
+        &lt;ul&gt;
+            &lt;!--active link in navbar with active attribute--&gt;
+            &lt;li active&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Discover&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+        </code></pre>
+        <!--Heading-->
+        <h1>This is a H1 heading</h1>
+        <!--link-->
+        <a href="#">This is a link (nothing will happen)</a>
+        <!--paragraph-->
+        <p>This is just a now normal paragraph.</p>
+        <p>below is the two type of list</p>
+        <!--bold tag-->
+        <p><b>Unordered list (bold)</b></p>
+
+        <!--unordered list-->
+        <ul>
+            <li><i>This is an italic list item</i></li>
+            <li><small>This is a small text list item</small></li>
+            <li><code>Monospaced</code></li>
+        </ul>
+
+        <!--ordered list-->
+        <p><b>Ordered list (bold)</b></p>
+        <ol>
+            <li><s>striked out text</s></li>
+            <li><u>Underlined text here</u></li>
+            <li><mark>highlighted text here</mark></li>
+        </ol>
+
+        <!--h2 header-->
+        <h2>This is a H2 heading and below is a Quote</h2>
+
+        <!--Blockquote-->
+        <blockquote>
+            <p>
+                “If you knew what I know about the power of giving you would not let a single meal pass without
+                sharing it in some way.”
+            </p>
+            <footer>Quote by <cite>Lord Buddha</cite></footer>
+        </blockquote>
+        <pre><code>
+&lt;blockquote&gt;
+    &lt;p&gt;
+        ...
+    &lt;/p&gt;
+    &lt;footer&gt;Quote by &lt;cite&gt;Someone &lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+        </code></pre>
+
+        <!--h3 header-->
+        <h3>This is a H3 heading and below is a code block</h3>
+        <p><mark>NOTE</mark> You can use <a href="https://prismjs.com/" target="_blank">prism.js</a> for code highlighting. </p>
+        <!--Code in pre-->
+        <pre>
+        <code>
+# Python program to mail merger
+# Names are in the file names.txt
+# Body of the mail is in body.txt
+
+# open names.txt for reading
+with open("names.txt",'r',encoding = 'utf-8') as names_file:
+
+# open body.txt for reading
+with open("body.txt",'r',encoding = 'utf-8') as body_file:
+
+    # read entire content of the body
+    body = body_file.read()
+
+    # iterate over names
+    for name in names_file:
+        mail = "Hello "+name+body
+
+        # write the mails to individual files
+        with open(name.strip()+".txt",'w',encoding = 'utf-8') as mail_file:
+            mail_file.write(mail)
+        </code>
+        </pre>
+
+        
+        <p>Horizontal line below</p>
+        <!--horizontal line-->
+        <hr>
+        <h3>Headers</h3>
+        <h1>h1 Header</h1>
+        <h2>H2 Header</h2>
+        <h3>H3 Header</h3>
+        <h4>H4 Header</h4>
+        <h5>H5 Header</h5>
+        <h6>H6 Header</h6>
+
+        <!--table-->
+        <h3>Tables</h3>
+        <!--responsive table with overflow attribute-->
+        <p><mark>NOTE</mark> Tables become responsive if you wrap the table with a div and add <mark>overflow</mark> attribute to it. </p>
+        <p>Example</p>
+        <pre><code>
+&lt;div overflow&gt;
+    &lt;table&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;
+        </code></pre>
+        <div overflow>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Head 1</th>
+                        <th>Head 2</th>
+                        <th>Head 3</th>
+                        <th>Head 4</th>
+                        <th>Head 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem.</td>
+                        <td>Cum.</td>
+                        <td>Rem.</td>
+                        <td>Sequi.</td>
+                        <td>Maiores.</td>
+                    </tr>
+                    <tr>
+                        <td>Officiis!</td>
+                        <td>Similique?</td>
+                        <td>Ducimus.</td>
+                        <td>Accusamus?</td>
+                        <td>Nam!</td>
+                    </tr>
+                    <tr>
+                        <td>Molestias?</td>
+                        <td>Sit.</td>
+                        <td>Consectetur!</td>
+                        <td>Accusantium?</td>
+                        <td>Similique?</td>
+                    </tr>
+                    <tr>
+                        <td>Nam.</td>
+                        <td>Doloremque?</td>
+                        <td>Unde.</td>
+                        <td>Sed.</td>
+                        <td>Eaque.</td>
+                    </tr>
+                    <tr>
+                        <td>Cumque.</td>
+                        <td>Voluptas.</td>
+                        <td>Magnam!</td>
+                        <td>Ipsam!</td>
+                        <td>Nobis.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Images</h3>
+        <img src="./bg.jpg" alt="This is an image.">
+        <small>Image is also responsive like other elements.</small>
+
+        <h3>Forms</h3>
+        <form>
+            <fieldset>
+                <legend>Form input elements (legend)</legend>
+
+                <div>
+                    <label for="inp1">Email</label>
+                    <input type="text" id="inp1" placeholder="Enter Email">
+                </div>
+                <div>
+                    <label for="inp2">Password</label>
+                    <input type="password" id="inp2" placeholder="Enter Password">
+                </div>
+                <div>
+                    <p>
+                        <input type="checkbox" id="inp3">
+                        <label for="inp3">Accept <a href="#">Terms & Condition</a></label>
+                    </p>
+                </div>
+                <div>
+                    <p>Gender :
+                        <label for="inp4">Male</label>
+                        <input type="radio" id="inp4" name="radio1">
+
+                        <label for="inp5">Female</label>
+                        <input type="radio" id="inp5" name="radio1">
+                    </p>
+                </div>
+                <div>
+                    <label for="inp6">Select option</label>
+                    <select name="inp6" id="inp6">
+                        <option value="val1">Option 1</option>
+                        <option value="val2">Option 2</option>
+                        <option value="val3">Option 3</option>
+                        <option value="val4">Option 4</option>
+                        <option value="val5">Option 5</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Submit in a div">
+                </div>
+                <input type="submit" value="Submit outside div">
+            </fieldset>
+        </form>
+
+        <form>
+            <div>
+                <label for="input">Input lable</label>
+                <input type="text" id="input" placeholder="normal input">
+            </div>
+        </form>
+        <p>Normal inputs based elements like input, select, etc are style based on below structure.</p>
+        <pre><code>
+&lt;form&gt;
+    ...
+    &lt;div&gt; 
+        &lt;label for=&quot;input&quot;&gt;Input lable&lt;/label&gt; 
+        &lt;input type=&quot;text&quot; id=&quot;input&quot;&gt; 
+    &lt;/div&gt;
+    ...
+&lt;/form&gt;
+        </code></pre>
+        <h3>TextArea</h3>
+        <p>Text area look like this and it is also responsive.</p>
+        <textarea name="a" id="a" rows="10" placeholder="Enter some text here...">hello, there this is a text box.</textarea>
+
+        <h3>Buttons</h3>
+        <p><mark>NOTE</mark> Buttons are also modified based on attributes, for seecondary use <mark>secondary</mark> & <mark>disabled</mark> for disabled button respectively.</p>
+        <button>Primary</button>
+        <button secondary>secondary</button>
+        <button disabled>Disabled</button>
+        <pre><code>
+&lt;button&gt;Primary&lt;/button&gt;
+&lt;button secondary&gt;secondary&lt;/button&gt;
+&lt;button disabled&gt;Disabled&lt;/button&gt;
+        </code></pre>
+
+    <h3>Global Attributes/class</h3>
+    <small>These are global atrribute or classes you can use to make navbar, container, buttons work responsively.</small>
+    <ol>
+        <li>overflow : wrapping an block with a <mark>div</mark> with attribute <mark>overflow</mark> make it responsive.</li>
+        <li>container : apply on <mark>section</mark> only to make a container wrapper.</li>
+        <li>secondary : apply on <mark>button</mark> to make secondary button.</li>
+        <li>active : add to <mark>li</mark> navbar to make it active</li>
+    </ol>
+    </section>
+
+    
+    <footer>
+        visit <i class="fab fa-github"></i> <a href="#">Github.com</a> btw this is footer.
+    </footer>
+</body>
+
+</html>

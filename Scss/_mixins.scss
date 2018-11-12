@@ -1,0 +1,95 @@
+@import 'variables';
+
+@mixin nav($theme_name) {
+    $navx-pad: 8px;
+    font: {
+        family: $font-family;
+    }
+
+    background-color: $secondary-color;
+    color: $navtext-color;
+    display: flex;
+    header {
+        padding: $navx-pad;
+        display: inline;
+
+        a {
+            text-decoration: none;
+            color: $navtext-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    header+input:checked {
+        &+div {
+            display: block;
+        }
+    }
+
+    div {
+        display: none;
+        margin-left: auto;
+        ul {
+            
+            list-style: none;
+            display: flex;
+            margin: 0 10px;
+
+            li {
+                a {
+                    display: inline-block;
+                    padding: $navx-pad;
+                    color: $navtext-color;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+
+                ul {
+                    right: 0;
+                    position: relative;
+                    background: pink;
+                    
+                }
+            }
+        }
+    }
+}
+
+@mixin button {
+    padding: 10px;
+    background-color: $primary-color;
+    color: $text-color;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+
+    &:disabled {
+        background: $tertiary-color;
+        cursor: not-allowed;
+    }
+
+    &[secondary] {
+        background-color: $secondary-color;
+        color:$primary-color;
+        &:active {
+            background-color: $primary-color;
+            color:initial;
+        }
+    }
+}

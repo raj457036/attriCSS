@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <link rel="stylesheet" href="themes/midnight-green.css">
+    <title>Grid</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav>
+        <header><a href="#">AttriCSS</a> <label for="nav"><i class="fas fa-bars"></i></label></header>
+        <input type="checkbox" id="nav" hidden checked>
+        <div overflow>
+            <ul>
+                <!--active link in navbar with active attribute-->
+                <li active><a href="#">Home</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Container attribute-->
+    <section container>
+        <h3>Introduction</h3>
+        <p><b>AttriCSS</b> is a <mark>classless</mark> css style sheet that style normal ugly html to beatiful representable website.</p>
+        <h6>Why?</h6>
+        <p>For faster prototyping of backend logic on front end without any use of classes and just using html.</p>
+        <ol>
+            <li>For blogging website just add attricss to site and it will turn a ugly site into a beauty.</li>
+            <li>For backend developer who do not want to dig into css classes.</li>
+            <li>For faster prototyping.</li>
+            <li>No use of classes. still responsive and still have almost all the features you need.</li>
+            <li>Create your own theme by just changing some variables.</li>
+        </ol>
+
+        <h3>Available Themes</h3>
+        <ol>
+            <li><a href="./templates/notheme.html">No Theme</a></li>
+            <li><a href="./templates/brightlight-green.html">Bright Light green</a></li>
+            <li><a href="./templates/midnight-green.html">Midnight Green</a></li>
+            <li><a href="./templates/darkforest-pink.html">Dark Forest Green</a></li>
+            <li><a href="./templates/darkfairy-pink.html">Dark Fairy Pink</a></li>
+            <li><a href="./templates/lightfairy-pink.html">Light Fairy Pink</a></li>
+        </ol>
+
+        <h3>Installation</h3>
+        <p><b>Predefined Themes</b></p>
+        <ol>
+            <li>Download the theme you want to use.</li>
+            <a href="#">Visit Themes From <i class="fab fa-github"></i></a>
+            <li>
+                add link to you <code>&lt;head&gt;</code> tag
+                <pre><code>&lt;link rel="stylesheet" href="path_to_attricss_file.css" type="text/css"&gt;</code></pre>
+            </li>
+        </ol>
+
+        <p><b>Custom Theme</b></p>
+        <ol>
+            <li>Download the pre-compiled SCSS files from <a href="#">here</a></li>
+            <li>Open the <mark> _variable.scss </mark> file
+                it has 8 variables
+                <pre><code>
+$navtext-color: #fff;               <-- This is for navbar text color
+$font-family: "Nunito", sans-serif; <-- This is Font Family for the theme
+$text-color: #000;                  <-- This is the text color on the body
+$body-bg: white;                    <-- This is body's background color (choose this color with text-color in mind to make it visible)
+$code-bg-color: #eeeeee;            <-- This is code blocks background color
+$tertiary-color: #bdbdbd;           <-- Tertiary color for theme theme
+$secondary-color: #212121;          <-- Secondary color for the theme
+$primary-color: #00c853;            <-- Primary color for the theme
+                </code></pre>
+            </li>
+
+            <li>Change these value with whatever theme you want to make.</li>
+            <li>Recompile the AttriCSS.scss file make the custom theme is ready. <a href="http://sass-lang.com/install">How to compile SCSS file to CSS.</a></li>
+        </ol>
+
+        
+    </section>
+
+    
+    <footer>
+        visit <i class="fab fa-github"></i> <a href="#">Github.com</a> btw this is footer.
+    </footer>
+</body>
+
+</html>
