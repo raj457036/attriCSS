@@ -1,11 +1,12 @@
 # attriCSS
 ## Introduction
-AttriCSS is a classless css style sheet that style normal ugly html to beatiful representable website.
+![AttriCSS a classless css Framework.](logo.png)
+AttriCSS is a classless css Framework that style normal ugly html to beautiful website.
 
 ## Why?
 For faster prototyping of backend logic on front end without any use of classes and just using html.
 
-* For blogging website just add attricss to site and it will turn a ugly site into a beauty.
+* For blogging websites just add attriCSS to site and it will turn a ugly site into a beauty.
 * For backend developer who do not want to dig into css classes.
 * For faster prototyping.
 * No use of classes. still responsive and still have almost all the features you need.
