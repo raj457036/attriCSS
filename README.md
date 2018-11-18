@@ -18,3 +18,6 @@ Visit for all the instruction and custom themeing : https://raj457036.github.io/
 
 ## Thank you
 If you use it just add a star and fork this repo :).
+
+# license
+MIT License
