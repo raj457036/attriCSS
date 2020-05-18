@@ -2,6 +2,8 @@
 ## Introduction
 ![AttriCSS a classless css Framework.](logo.png)
 
+## SIZE: ~4Kb (minified) ~1Kb (gzipped)
+
 AttriCSS is a classless css Framework that style normal ugly html to beautiful website.
 
 ## Why?
