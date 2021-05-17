@@ -19,7 +19,7 @@ For faster prototyping of backend logic on front end without any use of classes 
 Visit for all the instruction and custom themeing : https://raj457036.github.io/attriCSS/
 
 ## Thank you
-If you use it just add a star and fork this repo :).
+If you use it just add a star :).
 
 # license
 MIT License
